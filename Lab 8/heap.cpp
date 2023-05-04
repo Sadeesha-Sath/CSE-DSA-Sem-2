@@ -9,17 +9,20 @@ void heapify(int arr[], int n, int root)
    int left = 2 * root + 1;
    int right = 2 * root + 2;
 
-   if (right < n && arr[right] > arr[top])
-      top = right;
-
+   // If left node is greater than the root
    if (left < n && arr[left] > arr[top])
       top = left;
+
+   // If right node is greater than the root
+   if (right < n && arr[right] > arr[top])
+      top = right;
 
    if (top != root)
    {
       int temp = arr[root];
       arr[root] = arr[top];
       arr[top] = temp;
+      // Recursively use heapify
       heapify(arr, n, top);
    }
 }
@@ -54,8 +57,18 @@ void displayArray(int arr[], int n)
 // main program
 int main()
 {
-   int heap_arr[] = {4, 17, 3, 12, 9, 6};
-   int n = sizeof(heap_arr) / sizeof(heap_arr[0]);
+   const int MAX = 100;
+   int n;
+   cout << "Size of heap: ";
+   cin >> n;
+
+   int heap_arr[MAX];
+
+   for (int i = 0; i < n; i++)
+   {
+      cin >> heap_arr[i];
+   }
+
    cout << "Input array" << endl;
    displayArray(heap_arr, n);
 
