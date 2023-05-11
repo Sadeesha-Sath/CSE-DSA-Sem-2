@@ -1,2 +1,5 @@
 .DS_Store
 .vscode/
+heap
+hashtable_basics
+hashtable_with_chaining
