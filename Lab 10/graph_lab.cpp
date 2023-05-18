@@ -33,12 +33,6 @@ struct Graph
         // select node v and push u into v's neighbour
         nodes[v].neighbours.push_back(u);
     }
-    
-    void addedge(int from_node, int to_node)
-    {
-        // select node [from_node] and push [to_node] into [from_node]'s neighbour
-        nodes[from_node].neighbours.push_back(to_node);
-    }
 
     void print()
     {
