@@ -4,3 +4,5 @@ heap
 hashtable_basics
 hashtable_with_chaining
 graph_lab
+mst_lab
+sssp_lab
